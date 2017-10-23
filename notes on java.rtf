@@ -1,0 +1,295 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033\deflangfe1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fmodern\fprq1\fcharset0 Consolas;}}
+{\colortbl ;\red255\green0\blue0;\red127\green0\blue85;\red0\green0\blue255;\red0\green0\blue0;\red106\green62\blue62;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\nowidctlpar\sa200\sl276\slmult1\lang9\f0\fs22 how to write a java program?\par
+ans : file menu --> new --> other-> java project --> give a project name and click on finish \par
+observe left hand side window called "Package explorer"\par
+expand the newly creaetd project \par
+u see ..src folder . right click on src folder and choose "new class"\par
+ctrl key + space bar and press enter key to get the main  method \par
+type syso : and press ctrl n space bar to get System.out.println()\par
+what is source code ?\par
+ans :the file which u typed in an editor\par
+what is teh extension given to java source code files ?\par
+ans: First.java\par
+javascript had an "interpreter" \par
+C lang has a compiler \par
+java has both; compiler and interpreter\par
+compiler job : point out spelling mistakes; semicolon missing; i.e syntax errors in the source code all at once \par
+if no errors, then output of java compiler is "bytecode"\par
+First.class\par
+\par
+how to compile \par
+2 ways\par
+1. through eclipse or any other IDE ( integrated development environment )\par
+2. throu command prompt \par
+how to find out whther java is installed on our machines?\par
+search for c:\\program files\\java \par
+it contains 2 folders\par
+jdk  : java development kit \par
+contains javac.exe which is the java compiler\par
+jre : java runtime environment which is the java interpreter\par
+\par
+c:\\folder_which_contains_project>javac First.java\par
+path where First.java is stored \par
+D:\\oraapps_java\\Lab9Java\\src\par
+go to windows explorer\par
+select the location bar and type cmd and enter \par
+a command prompt opens \par
+D:\\oraapps_java\\Lab9Java\\src>javac First.java\par
+the OS gives an error msg " javac is nto recognized "\par
+javac.exe location is not known to the OS\par
+solution : u have to set an environmnet variable called "path "\par
+what is the location of javac.exe\par
+C:\\Program Files\\Java\\jdk1.7.0_80\\bin\\javac.exe\par
+two ways to specify path\par
+1. one time use ( by writing in command prompt )\par
+D:\\oraapps_java\\Lab9Java\\src>set path=C:\\Program Files\\Java\\jdk1.7.0_80\\bin;%path%\par
+D:\\oraapps_java\\Lab9Java\\src>javac First.java\par
+what is the output of compilation process ?\par
+D:\\oraapps_java\\Lab9Java\\src>dir\par
+output of compilation : First.class\par
+this is called the bytecode\par
+how different is a bytecode from machine code\par
+how is java different from other programming languages?\par
+this bytecode will be converted into machine code by the java interpreter \par
+how to execute java program?\par
+ans : D:\\oraapps_java\\Lab9Java\\src>java First\par
+if u r getting error " could not load main class file" try below command\par
+D:\\oraapps_java\\Lab9Java\\src>set classpath=.;\par
+if you have written a package statement in your java program follow the following \par
+D:\\oraapps_java\\Lab9Java\\src>java packagename.classname\par
+a java program compiled on windows OS can be executed as it is on a linux OS, without recompiling. this is made possible by having a jre for linux OS\par
+jre is responsible for converting the bytecode into linux specific code (native code)\par
+there is no need to recompile the source code according to the linux platform \par
+java is platform independent\par
+java code is write once; run anywhere ( on any platform )\par
+platform is a combination of hardware and software\par
+the OS and the processor dont matter for java \par
+other languages dont work like this\par
+eg. the code obtained after compiling a C program is object code and nto bytecode. object code is specific to a particular platform \par
+hence a 32 bit OS on which a c program is compiled will not run on a 64 bit machine. the code needs to be \cf1 recompiled\cf0  according to the new 64bit machine. \par
+\par
+2. permanent ( environment variabels )\par
+right click on my computer --> propertie --> advanced system settings--> environment variabels \par
+\par
+how to execute java program\par
+how to display message to the user \par
+how to accept value from the user\par
+local variables are not given initial values. developer has to explicitly provide values \par
+\cf2\highlight3\b\f1\fs20 float\cf4\b0  \cf5 height\cf4 =\ul 4.5\ulnone\par
+\cf0\highlight0\f0\fs22 decimal value in java is considered to be double datatype\par
+so u have to explicitly convert from double to float \par
+\cf2\highlight3\b\f1\fs20 float\cf4\b0  \cf5 height\cf4 =\lang1033 (float)\lang9\ul 4.5\ulnone\par
+\cf2\b float\cf4\b0  \cf5 height\cf4 =\ul 4.5\lang1033 f;\lang9\ulnone\par
+\cf0\highlight0\f0\fs22 concept of "import statement"\par
+the default package in java is java.lang\par
+String class  used in the program belongs to java.lang\par
+hence u did not get a compilation error \par
+u can refer to all classes in java.lang pkg without import statement\par
+if the program refers to a class which is not in java.lang package, then an import staement is required\par
+Scanner class does not belong to java.lang pkg \par
+Date dt = new Date();\par
+above line calls the default constructor of the class\par
+Scanner clss does not have default constructor. why ?\par
+then how to create object\par
+ans : there will be some other constructor i.e parameterized constructor; constructor which takes parameters \par
+Scanner scan = new Scanner(System.in);\par
+\par
+\par
+\par
+how to validaet user input \par
+how to decide on method names\par
+how to decide what value to be passed to a method\par
+and what value to be returned from a method \par
+how to create object of a class\par
+eg. classname objectname = new classname();\par
+will this object have default values or garbage values\par
+how to assign values to the attributes/propeties of a class \par
+two ways\par
+1. constructor\par
+2.setter method\par
+how to display teh value inside an object ?\par
+\par
+int x;\par
+is the PatientBean a datatype?\par
+is classname a datatype ? yes\par
+class is similar to structure concept in C\par
+can v work only with a structure. no. v need a structure \cf1 variable. \cf0 the variable contains values \par
+class PatientBean is similar to int datatype \par
+int num1;\par
+to put values, i need an object of PatientBean \par
+object is similar to variable \par
+class is similar to datatype \par
+how to create a class\par
+how to decide how many attributes/methods this class will have\par
+does a class always need attributes?\par
+does a class always need methods?\par
+how to call a method of a class from another class \par
+ans:create object of other class and call method by name\par
+can variables be declared inside a method ? yes. they are called local variables\par
+can variables be declared inside a class. yes . they are called attribtues of the class  \par
+how to print the value of an object?\par
+ans getter method\par
+attribtues declared at class level have default values \par
+local variables do not have default values \par
+placing breakpoints in the source code to understand program line by line : debugging java program \par
+rules : the public class name must be the same as the filename \par
+if you keep the files in a folder under src folder; then a package statement is required in the java file \par
+if i dont explicitly create a package, then all java files are stored in src folder \par
+\par
+if i create a package then java files are stored in src\\pkgnamefolder\par
+\par
+day 2 \par
+every class has a default constrcutor even if not written within the class \par
+construcotr is a special method having same name as class name\par
+if u specify return type  with a constructor, it is no longer considered to b a constructor \par
+by default the scope of a class, method, attribute is "package level" scope \par
+solution : make the constructor public\par
+scopes in java  ( in ascending order ) \par
+default  : when nothing is specified before the mehtod name/attribute name/classname \par
+\tab this method/attribute/class can be referred to anywhere in the \cf1 same package\cf0\par
+private : this method/attribute/class can be referred to anywhere in the  \cf1 same class\cf0\par
+protected \par
+public: this method/attribute/class can be referred to anywhere in any package \par
+\par
+two different projects : class created in one project ; accessed in another project \par
+defautl values are given to the artributes depending on datatype\par
+what if u want to give values to the attribtues  ?\par
+1. setter method\par
+2. parameterized constructor : constructor which accepts arguments \par
+a class can more than one constructor \par
+this feature of having more than one method with different argument list is called method overloading \par
+what is the job of a constructor ?\par
+ans : assign teh values passed to teh attribtues of the class \par
+\par
+special method called toString() \par
+this toString mehtod belongs to the parent class java.lang.Object\par
+when the object is directly printed ; syso(emp) ; by default toString() gets called\par
+overriding concept : if the child class (Employee) wishes to change the method logic of a parent class methd; this is called overriding\par
+in what way Employee class related to Object class ?\par
+ans : every class parent is Object by default \par
+did u specify that employee class is a child of Object class? no\par
+toSTring is an alternative to many getter methods \par
+if u want to \cf1 change \cf0 the vlaue in an object after it is created  ? what to do \par
+ans: setter method \par
+when the child class  writes the method logic of a method in the parent interface, this is also called overrding \par
+class A\par
+\par
+class B\par
+\par
+itnerface A\par
+\par
+class B\par
+\par
+interface A\tab interface B\par
+\tab class C\par
+\par
+class A\tab interfaceB /one or more  itneface\par
+\tab class C\par
+\par
+interface A\tab interface B\par
+\par
+\tab interface C\par
+array concept is used to store many values of the same datatye \par
+\par
+accept values of empnum and name from user ; create an object with these values\par
+store object into array; repeat this 5 times; display the value of all 5 objects \par
+\par
+nullpointerexception \par
+static varibale concept : a class can have two types of attributes \par
+static and instance or non static ( this is the default )\par
+what is the purpose of static variable ? \par
+how to access non static i.e instance variable \par
+rules to access non static attribute\par
+ans : create an object and refer to the instance / non static variable \par
+rules to access static variable\par
+ans : no need to create an object \par
+intefacename/classname.staticvariabelname \par
+interface variabels are by default public static and final \par
+\par
+to do static attribute with a class\par
+\par
+\par
+\par
+jdbc : importance of interfaces\par
+java database connectivity \par
+java.sql package \par
+java.util: Collections in java ( data structures ) \par
+\par
+array : problem with arrays\par
+if i have to delete an element in between the array; who will fill the gap between elements ?\par
+if i have to search an element in an array; i will have to write the logic for the same\par
+Collections is an improvment over arrays\par
+\tab java.util pkg\par
+\tab\tab Collection \par
+add()\par
+remove()\par
+search()\par
+modify()\par
+\tab Set\tab\tab\tab\tab List\par
+add()\{\par
+//logic of unique elments \par
+\}\par
+Set is a type of collection which will not accept duplicate values \par
+will u write the logic of how not to accept duplicate values ?\par
+insertion order : the order in which the elements are added shoudl be retained at the time of printing out the elemnets \par
+sorted order : the elements must be stored in sorted order \par
+advantage of an interface : \par
+the way in which the method logic is written varies \par
+\par
+accept values form user and insert record into table \par
+many ways of achieving this \par
+solution 1. java --> jdbc --> database ; module 2 ; knowledge of sql is required \par
+solution  2. java --> hibernate --> database ; module 4 ; no knowledge of sql needed \par
+solution  3. java --> spring -> database ; module 4 \par
+interface EmployeeService\{\par
+addEmployeeDetails(EmployeeBean bean);\par
+\}\par
+class Solution1 implemnets EmployeeService\{\par
+addEmployeeDetails(EmployeeBean bean)\{\par
+solution using java and jdbc \par
+\}\par
+class Solution2 implemnets EmployeeService\{\par
+addEmployeeDetails(EmployeeBean bean)\{\par
+solution using java and hibernate\par
+\}\par
+more than one solution ( implementation ) to the same functionality is possibel \par
+by using an interface \par
+plug n play architecture is possibel with interface\par
+polymorphism : one form many implementations\par
+\par
+\}\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+interface cannot have constructors\par
+for accessing variable of hte interface; is inheriance compulsory ? \par
+no\par
+interface can have methods; but these methods do not have method body \par
+these methods do not have the logic / implementation \par
+if there is a situation that the logic of the interface methods need to be written then the solution is to create a child class with the interface as parent and the child class writes the method logic \par
+the child class must compulsorily override all the methods of the interface and provide logic \par
+each object of the class will have its own values for the attributes\par
+if there is some information which is shared by all the objects of the class; this can be made as static \par
+the info in the static variable will exist even if the objects do not exist \par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 
